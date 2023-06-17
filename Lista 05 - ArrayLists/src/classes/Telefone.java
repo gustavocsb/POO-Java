@@ -29,10 +29,9 @@ public class Telefone {
         this.numero = numero;
     }
     
-    @Override
-    public String toString(){
-        return "Tipo: "+getTipo()
+    public void imprimirTelefone(){
+        System.out.println("Tipo: "+getTipo()
                 + "\nDDD: "+getDdd()
-                + "\nNumero: "+getNumero();
+                + "\nNumero: "+getNumero());
     }
 }

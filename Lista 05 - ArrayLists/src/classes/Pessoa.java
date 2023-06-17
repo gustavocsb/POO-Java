@@ -57,12 +57,14 @@ public class Pessoa {
         this.endereco = endereco;
     }
     
-    @Override
-    public String toString(){
-        return "Nome: "+getNome()
+    public void imprimir(){
+        System.out.println("Nome: "+getNome()
                 + "\nCPF: "+getCpf()
-                + "\nEmail: "+getEmail()
-                + "\nTelefone(s): "+getTelefones()
-                + "\nEndereco: "+getEndereco();
+                + "\nEmail: "+getEmail());
+        endereco.imprimirEndereco();
+        for (int i=0;i<getTelefones().size();i++){
+            System.out.println("\nTelefone "+(i+1)+": ");
+            getTelefones().get(i).imprimirTelefone();
+        }
     }
 }

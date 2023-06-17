@@ -6,6 +6,10 @@ public class Aluno extends Pessoa{
     private Curso curso;
     private ArrayList<Double> notas;
 
+    public Aluno (){
+        super();
+    }
+    
     public Curso getCurso() {
         return curso;
     }
@@ -40,9 +44,13 @@ public class Aluno extends Pessoa{
     }
     
     @Override
-    public String toString(){
-        return super.toString()
-                + "\n"+getCurso()
-                + "\nNotas: "+getNotas();
+    public void imprimir(){
+        System.out.println("----- Dados do Aluno -----");
+        super.imprimir();
+        getCurso().imprimirCurso();
+        for (int i=0;i<getNotas().size();i++){
+            System.out.println("Nota "+(i+1)+": "+getNotas().get(i).toString());
+        }
+        System.out.println("Media: "+calcularMedia());
     }
 }

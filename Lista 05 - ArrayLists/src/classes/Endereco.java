@@ -29,10 +29,9 @@ public class Endereco {
         this.estado = estado;
     }
     
-    @Override
-    public String toString(){
-        return "Estado: "+getEstado()
+    public void imprimirEndereco(){
+        System.out.println("Estado: "+getEstado()
                 + "\nCidade: "+getCidade()
-                + "\nRua: "+getRua();
+                + "\nRua: "+getRua());
     }
 }
